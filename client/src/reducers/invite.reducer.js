@@ -1,23 +1,22 @@
 const initialState = {
-  invites: [],
-  accept: [],
-  decline: []
+  invite: {},
+  going: [],
+  notgoing: []
 }
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case 'ALL_INVITES':
+    case 'INVITE':
       return  {
-        ...state, 
-        invites: [...state.invites, action.payload],
+        ...state, invite:action.payload,
     }; case 'GOING':
       return  {
         ...state, 
-        accept: [...state.accept, action.payload],
+        going: [...state.going, action.payload],
     }; case 'NOT_GOING':
     return  {
       ...state, 
-      decline: [...state.decline, action.payload],
+      notgoing: [...state.notgoing, action.payload],
   } 
     default:
       return state

@@ -2,20 +2,48 @@ html {box-sizing:border-box;}
 *, *::before, *::after {box-sizing:inherit; font-family: Arial, Helvetica, sans-serif;}
 
 .container {
-  width: 350px;
+  width: 1000px;
   margin: auto;
-  background: rgb(243, 243, 243);
-  text-align: center;
-  height: 450px;
   text-transform: capitalize;
   display: flex;
-  flex-direction: column;
-  position: relative;
-  
 }
 
 .email {
   text-transform: initial;
+}
+
+img {
+  width:150px;
+  border-radius: 50%;
+  border: 3px solid rgb(146, 146, 146);
+  height:150px;
+  margin-top: 55px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content h1 {
+  flex-grow: 1;
+}
+
+.card {
+  background: rgb(243, 243, 243);
+  margin: 10px;
+  border-radius: 5px;
+  height: 400px;
+  width: 275px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.info {
+  padding: 5px;
+  border-top: 2px solid rgb(233, 233, 233);
+  align-self: flex-end;
 }
 
 .count {
@@ -23,40 +51,31 @@ html {box-sizing:border-box;}
   justify-content: space-evenly;
 }
 
-img {
-  border-radius: 50%;
-  border: 3px solid rgb(146, 146, 146);
+.notgoing {
+  background: rgb(255, 71, 71);
+  width: 60px;
 }
 
-.info {
-  margin-top: 50px;
-  border-top: 2px solid rgb(236, 236, 236);
-  border-bottom: 2px solid rgb(236, 236, 236);
-  text-align: left;
-  padding-left: 50px;
+.going {
+  background: rgb(81, 184, 81);
+  width:60px;
 }
 
-.info p {
-  margin: 25px 0;
-}
-
-.decline {
-  background: red;
-}
-
-.decline i, .accept i{
-  padding-top:5px;
-  width:45px;
-}
-
-.accept {
-  background: rgb(0, 173, 0);
+.notgoing:focus, .going:focus {
+  outline: none;
 }
 
 .buttons {
-  position: absolute;
-  bottom: 0;
+  border-top: 2px solid rgb(233, 233, 233);
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  padding: 5px 0;
+}
+
+#clear {
+  margin-top: 5px;
+}
+
+#done {
+  margin-top: 5px;
 }
